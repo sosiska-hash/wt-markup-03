@@ -1,0 +1,186 @@
+:root {
+  --logo: #2196f3;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Roboto';
+}
+
+ul {
+  list-style-type: none;
+}
+
+header .logo {
+  font-family: 'Raleway';
+  font-size: 26px;
+  font-weight: 700;
+}
+span {
+  color: var(--logo);
+}
+
+header nav ul li {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+}
+
+header nav ul li :hover {
+  color: var(--logo);
+}
+
+header .contacts li a {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  color: #757575;
+  fill: #757575;
+}
+
+header .contacts li :hover {
+  color: var(--logo);
+  fill: var(--logo);
+}
+
+main .top {
+  background-color: #2f303a;
+  font-family: 'Roboto';
+  font-size: 44px;
+  font-weight: 700;
+  color: white;
+}
+button {
+  background-color: var(--logo);
+  color: white;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 700;
+}
+
+main .preferences ul li h3 {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 700;
+}
+
+main .preferences ul li p {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  color: #757575;
+}
+
+main .preferences ul li svg {
+  background-color: #f5f4fa;
+}
+
+main .specialisations h2 {
+  font-family: 'Roboto';
+  font-size: 36px;
+  font-weight: 700;
+}
+
+main .specialisations ul li img {
+  border-radius: 10px;
+}
+
+main .team {
+  background-color: #f5f4fa;
+}
+
+main .team h2 {
+  font-family: 'Roboto';
+  font-size: 36px;
+  font-weight: 700;
+}
+
+main .team ul .member {
+  box-shadow: 0 2px 3px 0px;
+}
+
+main .team ul li svg {
+  fill: #afb1b8;
+}
+
+main .team ul li a :hover {
+  background-color: var(--logo);
+  fill: white;
+}
+
+main .team ul li .name {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+}
+
+main .team ul li .post {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  color: #757575;
+}
+
+footer {
+  background-color: #2f303a;
+}
+
+footer .logo {
+  font-family: 'Raleway';
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+}
+
+footer .logo span {
+  color: var(--logo);
+}
+
+footer address {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+footer address a {
+  color: #ffffff99;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+footer p {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 700;
+}
+
+footer ul li svg {
+  fill: white;
+  background-color: #ffffff1a;
+}
+
+footer ul li a :hover {
+  background-color: var(--logo);
+}
+
+footer form input {
+  background-color: #2f303a;
+  color: #ffffff99;
+  border-color: #ffffff4d;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+}
+
+footer button {
+  background-color: var(--logo);
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  fill: white;
+}
