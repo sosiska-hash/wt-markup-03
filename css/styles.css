@@ -21,6 +21,14 @@ span {
   color: var(--logo);
 }
 
+.container{
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 header nav ul li {
   font-family: 'Roboto';
   font-size: 14px;
@@ -120,6 +128,11 @@ main .team ul li .post {
   font-size: 16px;
   font-weight: 400;
   color: #757575;
+}
+
+main .team ul li div {
+  padding: 30px 59px 30px 60px;
+  background-color: #ffffffff;
 }
 
 footer {
