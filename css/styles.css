@@ -73,6 +73,9 @@ header nav ul li a {
 header nav ul {
   display: flex;
   margin-left: 50px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 header nav ul li :hover {
@@ -137,6 +140,32 @@ main .top h1 {
   margin-bottom: 30px;
 }
 
+main .preferences {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+main .preferences li {
+  margin-left: 30px;
+  flex-basis: calc((100%-90px) / 3);
+}
+
+main .preferences li h3 {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+main .preferences li p {
+  margin-bottom: 0;
+}
+
+main .preferences ul {
+  display: flex;
+  margin-left: -30px;
+}
+
 main .preferences ul li h3 {
   font-family: 'Roboto';
   font-size: 14px;
@@ -154,10 +183,29 @@ main .preferences ul li svg {
   background-color: #f5f4fa;
 }
 
+main .specialisations {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+
+main .specialisations li {
+  margin-left: 30px;
+  flex-basis: calc((100%-90px) / 3);
+}
+
+main .specialisations ul {
+  display: flex;
+  margin-left: -30px;
+}
+
 main .specialisations h2 {
   font-family: 'Roboto';
   font-size: 36px;
   font-weight: 700;
+  margin-bottom: 50px;
+  padding-left: 0;
+  margin: 0;
+  text-align: center;
 }
 
 main .specialisations ul li img {
@@ -174,6 +222,21 @@ main .team h2 {
   font-family: 'Roboto';
   font-size: 36px;
   font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+main .team ul {
+  display: flex;
+  margin-left: -30px;
+  text-align: center;
+}
+
+main .team li {
+  margin-left: 30px;
+  flex-basis: calc((100%-90px) / 3);
+  box-shadow: var(--box-shadow);
+  border-radius: 0px 0px 4px 4px;
 }
 
 main .team ul .member {
@@ -191,8 +254,11 @@ main .team ul li a :hover {
 
 main .team ul li .name {
   font-family: 'Roboto';
-  font-size: 16px;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--title-text-color);
 }
 
 main .team ul li .post {
@@ -200,6 +266,9 @@ main .team ul li .post {
   font-size: 16px;
   font-weight: 400;
   color: #757575;
+  line-height: 1.19;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 main .team ul li div {
@@ -209,6 +278,8 @@ main .team ul li div {
 
 footer {
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 footer .logo {
@@ -216,6 +287,8 @@ footer .logo {
   font-size: 26px;
   font-weight: 700;
   color: white;
+  display: flex;
+  margin-bottom: 20px;
 }
 
 footer .logo span {
@@ -230,17 +303,25 @@ footer address {
   font-style: normal;
 }
 
+footer ul li {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
 footer address a {
   color: #ffffff99;
   font-size: 14px;
   font-weight: 400;
 }
 
-footer p {
+footer .container p {
   color: white;
   font-family: 'Roboto';
   font-size: 14px;
   font-weight: 700;
+  text-transform: uppercase;
+  display: inline-flex;
 }
 
 footer ul li svg {
