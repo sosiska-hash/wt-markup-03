@@ -1,44 +1,71 @@
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --dark-bg-text-color: #ffffff;
+  --accent-button-color: #188ce8;
+  --dark-bg-color: #2f303a;
+  --team-bg-color: #f5f4fa;
+  --border-header: #ececec;
+  --icon-bg: #44454e;
+  --icon-color: #afb1b8;
+  --box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 html {
   box-sizing: border-box;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 body {
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6,
+p {
   margin-top: 0;
 }
 
-:root {
-  --logo: #2196f3;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-a {
-  color: black;
+address {
+  font-style: normal;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.link {
   text-decoration: none;
-  font-family: 'Roboto';
+  color: inherit;
 }
 
-ul {
-  list-style-type: none;
-}
-
-header .logo {
-  font-family: 'Raleway';
-  font-size: 26px;
-  font-weight: 700;
-  text-decoration: none;
-  margin-right: 93px;
-  line-height: 1.19;
-}
-span {
-  color: var(--logo);
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
 }
 
 .container {
@@ -49,211 +76,256 @@ span {
   padding-right: 15px;
 }
 
-header nav {
-  display: inline-flex;
+/* header */
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-right: 93px;
+}
+
+.accent-logo {
+  color: #000000;
+}
+
+/* Навігація сайту */
+
+nav {
+  display: flex;
   align-items: center;
 }
 
-header nav ul li {
-  font-family: 'Roboto';
-  font-size: 14px;
-  font-weight: 500;
+.site-nav {
   display: flex;
 }
 
-header nav ul li a {
+.contacts {
+  display: flex;
+}
+
+.site-nav > li:not(:first-child),
+.contacts > li:not(:first-child) {
+  margin-left: 50px;
+}
+
+.site-nav .link {
+  color: var(--title-text-color);
+  transition: color var(--animation);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.menu-nav {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.02;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
-}
-
-header nav ul {
   display: flex;
-  margin-left: 50px;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+  align-items: center;
 }
 
-header nav ul li :hover {
-  color: var(--logo);
-}
-
-header .contacts li a {
-  font-family: 'Roboto';
-  font-size: 14px;
+.e-mail-phone {
   font-weight: 500;
-  color: #757575;
-  fill: #757575;
-  margin-left: 50;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  transition: color var(--animation);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  align-items: center;
 }
 
-header .contacts {
-  display: inline-flex;
+.contacts .link:hover .e-mail-phone,
+.contacts .link:focus .e-mail-phone {
+  color: var(--accent-color);
 }
 
-header .contacts li :hover {
-  color: var(--logo);
-  fill: var(--logo);
+.icon-contacts {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+  transition: fill var(--animation);
 }
 
-main .top {
-  background-color: #2f303a;
-  font-family: 'Roboto';
-  font-size: 44px;
-  font-weight: 700;
-  text-align: center;
-  padding-bottom: 200px;
-  padding-top: 200px;
-  color: white;
+.contacts .link:hover .icon-contacts,
+.contacts .link:focus .icon-contacts {
+  fill: var(--accent-color);
 }
 
-main .top button {
-  background-color: var(--logo);
-  color: white;
-  font-family: 'Roboto';
-  font-size: 16px;
-  font-weight: 700;
+header {
+  border-bottom: 1px solid var(--border-header);
+}
+
+header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Кнопка "Замовити послугу" */
+
+.button {
+  cursor: pointer;
   font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  cursor: pointer;
+  color: var(--dark-bg-text-color);
+  background-color: var(--accent-color);
+
   min-width: 200px;
-  min-height: 50px;
+  height: 50px;
   border: transparent;
   border-radius: 4px;
+
+  transition: background-color var(--animation);
 }
 
-main .top h1 {
+.button:hover,
+.button:focus {
+  background-color: var(--accent-button-color);
+}
+
+/* Шапка головної сторінки - hero  */
+
+ .top {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-bg-text-color);
+    text-align: center;
+    padding-bottom: 200px;
+    padding-top: 200px;
+}
+
+/* Ми створюємо легкі рішення складних завдань для вашого бізнеса */
+
+.page-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 1100px;
+  color: var(--dark-bg-text-color);
+
+  width: 1048px;
+  height: 120px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
 }
 
-main .preferences {
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--title-text-color);
+}
+
+/* Відступ */
+
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-main .preferences li {
-  margin-left: 30px;
-  flex-basis: calc((100%-90px) / 3);
+/* Особливості - features */
+
+.feature-icon {
+  background-color: var(--team-bg-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-main .preferences li h3 {
+.preferences li {
+  margin-left: 30px;
+  flex-basis: calc((100% - 90px) / 3);
+}
+
+.preferences .list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.feature-title {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+  color: var(--title-text-color);
   margin-bottom: 10px;
 }
 
-main .preferences li p {
+.feature-text {
   margin-bottom: 0;
 }
 
-main .preferences ul {
-  display: flex;
-  margin-left: -30px;
-}
+/* Роботи на яких спеціалізуємось */
 
-main .preferences ul li h3 {
-  font-family: 'Roboto';
-  font-size: 14px;
-  font-weight: 700;
-}
-
-main .preferences ul li p {
-  font-family: 'Roboto';
-  font-size: 14px;
-  font-weight: 400;
-  color: #757575;
-}
-
-main .preferences ul li svg {
-  background-color: #f5f4fa;
-}
-
-main .specialisations {
+.specialization {
   padding-top: 0;
-  padding-bottom: 94px;
 }
 
-main .specialisations li {
+.specialization li {
   margin-left: 30px;
-  flex-basis: calc((100%-90px) / 3);
+  flex-basis: calc((100% - 90px) / 3);
 }
 
-main .specialisations ul {
+.specialization .list {
   display: flex;
   margin-left: -30px;
 }
 
-main .specialisations h2 {
-  font-family: 'Roboto';
-  font-size: 36px;
-  font-weight: 700;
+.specialization .section-title {
   margin-bottom: 50px;
-  padding-left: 0;
-  margin: 0;
-  text-align: center;
 }
 
-main .specialisations ul li img {
-  border-radius: 10px;
-  display: block;
-  height: auto;
+.thumb {
+  position: relative;
 }
 
-main .team {
-  background-color: #f5f4fa;
+
+/* Наша команда */
+
+.team {
+  background-color: var(--team-bg-color);
 }
 
-main .team h2 {
-  font-family: 'Roboto';
-  font-size: 36px;
-  font-weight: 700;
+.team .section-title {
   margin-bottom: 50px;
-  text-align: center;
 }
 
-main .team ul {
+.list.our-team {
   display: flex;
   margin-left: -30px;
   text-align: center;
 }
 
-main .team li {
+.member {
   margin-left: 30px;
-  flex-basis: calc((100%-90px) / 3);
+  flex-basis: calc((100% - 90px) / 3);
   box-shadow: var(--box-shadow);
   border-radius: 0px 0px 4px 4px;
+  background-color: var(--dark-bg-text-color);
 }
 
-main .team ul .member {
-  box-shadow: 0 2px 3px 0px;
-}
-
-main .team ul li svg {
-  fill: #afb1b8;
-}
-
-main .team ul li a :hover {
-  background-color: var(--logo);
-  fill: white;
-}
-
-main .team ul li .name {
-  font-family: 'Roboto';
+.name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -261,92 +333,178 @@ main .team ul li .name {
   color: var(--title-text-color);
 }
 
-main .team ul li .post {
-  font-family: 'Roboto';
+.post {
   font-size: 16px;
-  font-weight: 400;
-  color: #757575;
   line-height: 1.19;
   text-align: center;
   margin-bottom: 0;
 }
 
-main .team ul li div {
-  padding: 30px 59px 30px 60px;
-  background-color: #ffffffff;
+.team-card-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
+.team p {
+  margin-bottom: 16px;
+}
+
+.social-links {
+  display: inline-flex;
+}
+
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color var(--animation);
+}
+
+.social-links li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-links .icon {
+  fill: var(--icon-color);
+  transition: fill var(--animation);
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  background-color: var(--accent-color);
+}
+
+.social-links a:hover .icon,
+.social-links a:focus .icon {
+  fill: var(--dark-bg-text-color);
+}
+
+
+/* Підвал - Footer */
+
 footer {
-  background-color: #2f303a;
+  background-color: var(--dark-bg-color);
+  color: var(--dark-bg-text-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
+footer .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+/* Контейнер Address */
+
 footer .logo {
-  font-family: 'Raleway';
-  font-size: 26px;
-  font-weight: 700;
-  color: white;
   display: flex;
   margin-bottom: 20px;
 }
 
-footer .logo span {
-  color: var(--logo);
+.accent-logo-footer {
+  color: var(--dark-bg-text-color);
 }
 
-footer address {
-  color: white;
-  font-family: 'Roboto';
-  font-size: 14px;
-  font-weight: 400;
-  font-style: normal;
+.address-footer p {
+  margin-bottom: 9px;
 }
 
-footer ul li {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+.e-mail-footer {
+  margin-bottom: 9px;
 }
 
-footer address a {
-  color: #ffffff99;
-  font-size: 14px;
-  font-weight: 400;
+.e-mail-phone-footer {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--animation);
 }
 
-footer .container p {
-  color: white;
-  font-family: 'Roboto';
+/* Контейнер social-links-footer */
+
+.join {
+  color: var(--dark-bg-text-color);
+  text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
-  text-transform: uppercase;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+  padding-top: 12px;
+}
+
+footer .social-links {
   display: inline-flex;
 }
 
-footer ul li svg {
-  fill: white;
-  background-color: #ffffff1a;
+.social-links-footer .icon {
+  fill: var(--dark-bg-text-color);
 }
 
-footer ul li a :hover {
-  background-color: var(--logo);
+.social-links-footer a {
+  background-color: var(--icon-bg);
 }
 
-footer form input {
-  background-color: #2f303a;
-  color: #ffffff99;
-  border-color: #ffffff4d;
-  font-family: 'Roboto';
+/*  Контейнер Subscriotion */
+
+.subscription form {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.button .icon {
+  fill: var(--dark-bg-text-color);
+  margin-left: 10px;
+}
+
+.subscription .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+}
+
+.subscription input {
+  flex-grow: 2;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: border var(--animation);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 16px;
+  color: var(--dark-bg-text-color);
+}
+
+.email::placeholder {
   font-size: 16px;
-  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-footer button {
-  background-color: var(--logo);
-  font-family: 'Roboto';
+.email:not(:placeholder-shown) {
   font-size: 16px;
-  font-weight: 700;
-  color: white;
-  fill: white;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
 }
+
+.signup-form>input:hover,
+.signup-form>input:focus {
+  border: 1px solid var(--accent-color);
+}
+
+/* Позиціонування контейнерів у футері */
+
+.address,
+.social-links-footer {
+  width: calc((50% - 45px) / 2);
+}
+
+.subscription {
+  width: calc((100% - 30px) / 2);
+}
+
