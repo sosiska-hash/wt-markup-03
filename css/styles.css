@@ -48,6 +48,10 @@ img {
   height: auto;
 }
 
+.rounded {
+  border-radius: 10px;
+}
+
 address {
   font-style: normal;
 }
